@@ -26,7 +26,7 @@ public class HomeController {
 		List<Item> items = itemsDao.findAll();
 		model.addAttribute("items", items);
 
-		return new ModelAndView("index", "register", "Welcome to GC Coffee");
+		return new ModelAndView("index", "register", "");
 		// Use Model model as parameter if trying to display multiple items on the same
 		// page
 
@@ -56,26 +56,7 @@ public class HomeController {
 		return new ModelAndView("summary", "person", p);
 
 	}
-
-	// @RequestMapping("/add")
-	// public ModelAndView add(@RequestParam("firstName") String firstName,
-	// @RequestParam("lastName") String lastName,
-	// @RequestParam("email") String email, @RequestParam("phoneNum") String
-	// phoneNum,
-	// @RequestParam("password") String password) {
-	//
-	// System.out.println("ADD");
-	// System.out.println(firstName);
-	// System.out.println(lastName);
-	// System.out.println(email);
-	// System.out.println(phoneNum);
-	// System.out.println(password);
-	//
-	// Person p = new Person(firstName, lastName, email, phoneNum, password);
-	//
-	// usersDao.addUser(p);
-	//
-	// return new ModelAndView("redirect:/");
-	// }
+	
+	
 
 }
